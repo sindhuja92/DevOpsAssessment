@@ -5,10 +5,10 @@ Use CM tools such as Puppet, Ansible, or Chef to automate the installation of ba
 
 I have gone through various sample templates that are available in online. Previously I worked on creating resources like VPC, subnet, Internet gateway, EC2instance with user data and S3 buckets. But this task seems to be a bit different. Here we used CloudFormation::init to create configuration files for installing packages. 
 
-After going through the following sample which is available online https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf I thought its something easy to implement. But after looking at my IAM policy I realized that I am restricted to ELB, AutoScaling Groups and RDS. So I thought this should be implemented with by installing the database itself on the EC2 instance. I tried to modify the template accordingly.
+After going through the following sample which is available online https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf I thought its something easy to implement. But after looking at my IAM policy I realized that I am restricted to ELB, AutoScaling Groups and RDS. So I thought this should be implemented by installing the database itself on the EC2 instance. I tried to modify the template accordingly.
 
 Step1:
-I referred the videos availabe and came to a conclusion on what all resources required to host wordpress CMS in the cloud.
+I referred the videos availabe and came to a conclusion on what all resources required to install wordpress CMS in the cloud.
 
 Step2: 
 I started working on the template accordingly and finally came up with one CFT.
